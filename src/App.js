@@ -4,12 +4,16 @@ import Navbar from "./Header";
 import Home from "./Home";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import CardGrid from "./CardGrid";
+import LeftDrawer from "./Drawer";
+import Contact from "./Contact";
 
 function App() {
   return (
     <>
       <Router>
         <Navbar />
+
+        <Contact />
         <Switch>
           <Route path="/products" exact component={CardGrid} />
           <Route path="/" exact component={Home} />

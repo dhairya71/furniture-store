@@ -30,7 +30,34 @@ export const Menu = [
     ],
   },
   {
-    title: "Bedroom room",
+    title: "Bedroom",
+    child: [
+      {
+        title: "sofa",
+        index: 11,
+      },
+    ],
+  },
+  {
+    title: "Bathroom",
+    child: [
+      {
+        title: "sofa",
+        index: 11,
+      },
+    ],
+  },
+  {
+    title: "Kitchen",
+    child: [
+      {
+        title: "sofa",
+        index: 11,
+      },
+    ],
+  },
+  {
+    title: "Outdoor",
     child: [
       {
         title: "sofa",

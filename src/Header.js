@@ -12,6 +12,11 @@ import { Menu } from "./Menu";
 function Header() {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
+  const handleEnter = (e) => {
+    if (e.key === "Enter") {
+      window.location.reload();
+    }
+  };
 
   const [product, setProduct] = useState(false);
   /* const [productClick1, setProductClick1] = useState(false);
@@ -35,9 +40,11 @@ function Header() {
       <Link to="/products">Products</Link>
       <div className="header__search">
         <input
+          style={{ color: "blue", paddingLeft: "10px" }}
           type="text"
-          placeholder="search"
+          placeholder=" search"
           className="header__search__bar"
+          onKeyDown={handleEnter}
         />
         <Link to="#" onClick={handleClick}>
           <SearchIcon className="search__button" />
