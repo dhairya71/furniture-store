@@ -7,6 +7,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 import SearchIcon from "@material-ui/icons/Search";
 import DoubleArrowIcon from "@material-ui/icons/DoubleArrow";
 import "./Header.css";
+import Logo from "./rsz_11logo_transparent.png";
 import { Menu } from "./Menu";
 
 function Header() {
@@ -34,13 +35,22 @@ function Header() {
             <MenuIcon className="menu" />
           )}
         </Link>
-        <div className="header__name">Amit Exports</div>
+        <Link to="/products">Products</Link>
+        <div className="header__name">
+          <Link to="/">
+            <img src={Logo} alt="Amit Exports" style={{ maxHeight: "8vh" }} />
+          </Link>
+        </div>
       </div>
-      <Link to="/">Home</Link>
-      <Link to="/products">Products</Link>
+
       <div className="header__search">
         <input
-          style={{ color: "blue", paddingLeft: "10px" }}
+          style={{
+            color: "blue",
+            paddingLeft: "10px",
+            border: "none",
+            borderBottom: "1px solid lightgray",
+          }}
           type="text"
           placeholder=" search"
           className="header__search__bar"
