@@ -7,9 +7,12 @@ import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 /* import Modal from "@material-ui/core/Modal"; */
 import Button from "@material-ui/core/Button";
+import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
+import FavoriteIcon from "@material-ui/icons/Favorite";
 import { makeStyles } from "@material-ui/core/styles";
 import { useMediaQuery } from "@material-ui/core";
 import { Modal } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles({
   card: {
@@ -43,6 +46,8 @@ function Cards({ title, image, price }) {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
   const handleClick = (e) => setOpen(!open);
+  const [fav, setFav] = useState(false);
+  const handle = () => setFav(!fav);
   return (
     <div>
       <Card className={classes.card}>
@@ -60,6 +65,13 @@ function Cards({ title, image, price }) {
           <Button className={classes.cardButton} onClick={handleClick}>
             Description
           </Button>
+          <Link to="#" onClick={handle}>
+            {fav ? (
+              <FavoriteIcon style={{ color: "red" }} />
+            ) : (
+              <FavoriteBorderIcon style={{ color: "black" }} />
+            )}
+          </Link>
         </CardActions>
       </Card>
       <div>
