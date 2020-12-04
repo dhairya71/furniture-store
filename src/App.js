@@ -13,7 +13,6 @@ function App() {
       <Router>
         <Navbar />
 
-        <Contact />
         <Switch>
           <Route path="/products" exact component={CardGrid} />
           <Route path="/" exact component={Home} />
