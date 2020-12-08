@@ -28,25 +28,25 @@ function Header() {
   return (
     <div className="header">
       <div className="header__main">
-        <Link to="#" onClick={handleClick} className="header__menu">
-          {click ? (
-            <CloseIcon className="menu" />
-          ) : (
-            <MenuIcon className="menu" />
-          )}
-        </Link>
-        <Link to="/products">Products</Link>
-        <div className="header__name">
-          <Link to="/">
-            <img src={Logo} alt="Amit Exports" style={{ maxHeight: "8vh" }} />
+        <div>
+          <Link to="#" onClick={handleClick} className="header__menu">
+            {click ? (
+              <CloseIcon className="menu" />
+            ) : (
+              <MenuIcon className="menu" />
+            )}
           </Link>
+          <Link to="/products">Products</Link>
         </div>
+        <Link to="/">
+          <img src={Logo} alt="Amit Exports" style={{ maxHeight: "8vh" }} />
+        </Link>
       </div>
 
       <div className="header__search">
         <input
           style={{
-            color: "blue",
+            color: "black",
             paddingLeft: "10px",
             border: "none",
             borderBottom: "1px solid lightgray",
@@ -59,13 +59,13 @@ function Header() {
         <Link to="#" onClick={handleClick}>
           <SearchIcon className="search__button" />
         </Link>
+        <Button
+          className="header__button"
+          onClick={() => window.scrollBy(0, 1000)}
+        >
+          Contact Us
+        </Button>
       </div>
-      <Button
-        className="header__button"
-        onClick={() => window.scrollBy(0, 1000)}
-      >
-        Contact Us
-      </Button>
       <div className={click ? "nav__menu active" : "nav__menu"}>
         <List className="menu_1">
           {Menu.map((item, index) => {

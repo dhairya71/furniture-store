@@ -11,7 +11,6 @@ function Home() {
         src="https://ii2.pepperfry.com/media/wysiwyg/banners/home-wfh-section-image-2x-new.jpg"
         alt="homepage"
       />
-
       <Contact />
     </div>
   );
