@@ -5,7 +5,6 @@ import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 /* import CardHeader from "@material-ui/core/CardHeader"; */
 import Typography from "@material-ui/core/Typography";
-/* import Modal from "@material-ui/core/Modal"; */
 import Button from "@material-ui/core/Button";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import FavoriteIcon from "@material-ui/icons/Favorite";
